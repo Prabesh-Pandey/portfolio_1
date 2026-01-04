@@ -22,13 +22,37 @@ export function Navigation() {
     setIsMobileMenuOpen(false);
   };
 
+  // Active section tracking (scrollspy)
+  const [activeId, setActiveId] = useState<string>("home");
+
+  useEffect(() => {
+    const elements = navItems.map((item) => document.getElementById(item.id)).filter(Boolean) as HTMLElement[];
+    if (!elements.length) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    elements.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   const navItems = [
     { label: "Home", id: "home" },
     { label: "About", id: "about" },
     { label: "Skills", id: "skills" },
     { label: "Projects", id: "projects" },
-    { label: "Education", id: "education" },
     { label: "Experience", id: "experience" },
+    { label: "Education", id: "education" },
+    { label: "Achievements", id: "achievements" },
+    { label: "References", id: "references" },
     { label: "Blog", id: "blog" },
     { label: "Contact", id: "contact" },
   ];
@@ -58,7 +82,7 @@ export function Navigation() {
                 className="text-2xl text-[#2d2d2d]"
                 style={{ fontFamily: 'var(--font-serif)' }}
               >
-                <span className="text-[#6b7b5e]">Prashamsa</span>Pandey
+                <span className="text-[#6b7b5e]">Prashamsa</span> Pandey
               </h1>
             </motion.div>
 
@@ -68,14 +92,15 @@ export function Navigation() {
                 <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm text-[#6b6b6b] hover:text-[#6b7b5e] transition-colors relative group"
+                  className={`text-sm relative group transition-colors ${activeId === item.id ? 'text-[#2d2d2d] font-semibold' : 'text-[#6b6b6b] hover:text-[#6b7b5e]'}`}
                   style={{ fontFamily: 'var(--font-sans)' }}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  aria-current={activeId === item.id ? 'true' : undefined}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6b7b5e] transition-all duration-300 group-hover:w-full" />
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#6b7b5e] transition-all duration-300 ${activeId === item.id ? 'w-full' : 'group-hover:w-full'}`} />
                 </motion.button>
               ))}
               <Button
@@ -124,11 +149,12 @@ export function Navigation() {
                   <motion.button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="w-full text-left px-4 py-3 text-[#2d2d2d] hover:bg-[#f5f1e8] hover:text-[#6b7b5e] rounded-lg transition-colors"
+                    className={`w-full text-left px-4 py-3 rounded-lg transition-colors ${activeId === item.id ? 'text-[#2d2d2d] bg-[#f5f1e8]' : 'text-[#2d2d2d] hover:bg-[#f5f1e8] hover:text-[#6b7b5e]'}`}
                     style={{ fontFamily: 'var(--font-sans)' }}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
+                    aria-current={activeId === item.id ? 'true' : undefined}
                   >
                     {item.label}
                   </motion.button>

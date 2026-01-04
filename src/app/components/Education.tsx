@@ -9,59 +9,65 @@ export function Education() {
 
   const education = [
     {
-      degree: "Bachelor of Science in Food Science",
-      institution: "University of Food & Agricultural Sciences",
-      period: "2020 - 2024",
+      degree: "Bachelor of Technology, Food Technology",
+      institution: "Tribhuwan University — Central Campus of Technology",
+      period: "Nov 2018 - Dec 2023",
       description:
-        "Comprehensive program covering food chemistry, microbiology, nutrition, processing, and safety. Graduated with honors.",
+        "Undergraduate degree focusing on food processing, safety, quality assurance, and product development.",
       highlights: [
-        "GPA: 3.8/4.0",
-        "Dean's List - All Semesters",
-        "Research Assistant - Food Chemistry Lab",
-        "Senior Thesis: Novel Preservation Methods",
+        "Major: Food Technology",
+        "Completed coursework in food chemistry, microbiology, processing, and safety",
+        "Senior research and practical training",
       ],
+    },
+    {
+      degree: "School Leaving Certificate (Grade 11 & 12)",
+      institution: "United Academy Secondary School, Lalitpur",
+      period: "Aug 2016 - Aug 2018",
+      description: "Higher secondary education covering science subjects",
+      highlights: [],
+    },
+    {
+      degree: "School Leaving Certificate (Grade 10)",
+      institution: "Deepak English Medium High School, Banke",
+      period: "Apr 2005 - Jun 2016",
+      description: "Secondary education",
+      highlights: [],
     },
   ];
 
   const certifications = [
     {
-      title: "HACCP Certification",
-      issuer: "International HACCP Alliance",
-      date: "2024",
+      title: "HACCP Principles & Training",
+      issuer: "Department / Training Program",
+      date: "2023-2024",
       icon: Award,
       color: "#6b7b5e",
     },
     {
-      title: "Food Safety Manager",
-      issuer: "National Registry of Food Safety Professionals",
+      title: "Good Manufacturing Practices (GMP)",
+      issuer: "Training Program",
       date: "2023",
       icon: Award,
       color: "#8b6f47",
     },
     {
-      title: "Good Manufacturing Practices (GMP)",
-      issuer: "Food Safety Institute",
+      title: "ISO 22000:2018 (Familiarity)",
+      issuer: "Training Program",
       date: "2023",
       icon: Award,
       color: "#d4966a",
     },
-    {
-      title: "Sensory Evaluation Specialist",
-      issuer: "Society of Sensory Professionals",
-      date: "2024",
-      icon: Award,
-      color: "#8a9d7a",
-    },
   ];
 
   return (
-    <section id="education" className="py-24 bg-gradient-to-b from-[#f5f1e8] to-white" ref={ref}>
+    <section id="education" className="py-16 bg-gradient-to-b from-[#f5f1e8] to-white" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full">
@@ -89,7 +95,7 @@ export function Education() {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
@@ -152,20 +158,20 @@ export function Education() {
           {/* Certifications Grid */}
           <div>
             <motion.h3
-              className="text-3xl mb-8 text-center text-[#2d2d2d]"
+              className="text-3xl mb-6 text-center text-[#2d2d2d]"
               style={{ fontFamily: 'var(--font-serif)' }}
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               Professional Certifications
             </motion.h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((cert, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#6b7b5e]/10 group hover:-translate-y-2"
                 >

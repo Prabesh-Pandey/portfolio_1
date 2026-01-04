@@ -9,59 +9,51 @@ export function Experience() {
 
   const experiences = [
     {
-      title: "Quality Assurance Intern",
-      company: "FreshHarvest Foods Inc.",
-      location: "Portland, OR",
-      period: "Jan 2024 - May 2024",
-      type: "Internship",
+      title: "Quality Control Officer",
+      company: "Shivapuri Fresh Day Dairy Pvt. Ltd.",
+      location: "Bhaktapur, Nepal",
+      period: "Aug 2024 - Apr 2025; Jul 17, 2025 - Present",
+      type: "Full-time",
       responsibilities: [
-        "Conducted daily quality control tests on raw materials and finished products",
-        "Assisted in HACCP plan development and implementation",
-        "Performed microbiological testing and documented results",
-        "Participated in supplier audits and quality assessments",
-        "Contributed to process improvement initiatives that reduced waste by 15%",
+        "Supervised quality control protocols for raw milk and milk products",
+        "Monitored production and performed quality testing of pasteurized milk",
+        "Assisted in production processes for yoghurt, butter, SMP, and paneer",
+        "Maintained detailed lab records, raw material inspections, and production quality checks",
       ],
       achievements: [
-        "Implemented new testing protocol improving efficiency by 20%",
-        "Received commendation for attention to detail",
+        "Improved QC documentation and traceability",
+        "Maintained consistent product quality during high-volume production",
       ],
       color: "#6b7b5e",
     },
     {
-      title: "Research Assistant",
-      company: "University Food Science Laboratory",
-      location: "University Campus",
-      period: "Sep 2022 - Dec 2023",
-      type: "Research",
+      title: "Quality Control Intern",
+      company: "Himaida Nepal Pvt. Ltd.",
+      location: "Kathmandu, Nepal",
+      period: "Jul 2024 - Aug 2024",
+      type: "Internship",
       responsibilities: [
-        "Assisted in research on plant-based protein alternatives",
-        "Conducted chemical and nutritional analysis using advanced equipment",
-        "Maintained laboratory equipment and ensured safety compliance",
-        "Prepared samples and documented experimental procedures",
-        "Collaborated with graduate students on multiple research projects",
+        "Inspected raw honey for sensory and moisture parameters",
+        "Checked in-process and packaging quality",
+        "Maintained QC logs, test results, and corrective action reports",
       ],
       achievements: [
-        "Co-authored paper on sustainable protein sources",
-        "Presented findings at regional food science symposium",
+        "Contributed to improved sampling and inspection protocols",
       ],
       color: "#8b6f47",
     },
     {
-      title: "Product Development Volunteer",
-      company: "Community Food Innovation Center",
-      location: "Local Community",
-      period: "Jun 2023 - Aug 2023",
-      type: "Volunteer",
+      title: "Lab Assistant Intern",
+      company: "Department of Food Technology and Quality Control",
+      location: "Kathmandu, Nepal",
+      period: "May 2022 - Jul 2022",
+      type: "Internship",
       responsibilities: [
-        "Developed nutritious food products for food bank distribution",
-        "Formulated recipes using donated and surplus ingredients",
-        "Conducted sensory evaluations with community members",
-        "Ensured all products met food safety standards",
-        "Created educational materials on food preservation",
+        "Performed proximate analysis of incoming meat samples",
+        "Assisted in recipe formation and fortification of Nepali dish Momo",
       ],
       achievements: [
-        "Developed 5 new shelf-stable products",
-        "Trained 20+ volunteers in food safety practices",
+        "Supported lab workflows and data recording",
       ],
       color: "#d4966a",
     },
@@ -74,7 +66,7 @@ export function Experience() {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full">
@@ -105,7 +97,7 @@ export function Experience() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className="relative"
                 >

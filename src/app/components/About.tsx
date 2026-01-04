@@ -11,23 +11,23 @@ export function About() {
   const features = [
     {
       icon: Microscope,
-      title: "Scientific Excellence",
-      description: "Deep expertise in food chemistry, microbiology, and analytical techniques",
+      title: "Lab & Analytical Skills",
+      description: "Chemical testing, microbial analysis, proximate analysis, and analytical techniques used in food testing",
     },
     {
       icon: Leaf,
-      title: "Sustainability Focus",
-      description: "Committed to developing eco-friendly and sustainable food solutions",
+      title: "Dairy & Processing",
+      description: "Hands-on experience with pasteurization, homogenization, fermentation, and dairy product manufacturing",
     },
     {
       icon: Award,
-      title: "Quality Driven",
-      description: "Rigorous approach to food safety, quality control, and regulatory compliance",
+      title: "Food Safety & Quality",
+      description: "Trained in HACCP principles, GMPs, and ISO 22000:2018; experienced in QC protocols and documentation",
     },
     {
       icon: Target,
-      title: "Innovation Minded",
-      description: "Passionate about product development and cutting-edge food technologies",
+      title: "Product Development",
+      description: "Recipe formulation, fortification, sensory evaluation, and shelf-life/stability testing",
     },
   ];
 
@@ -38,7 +38,7 @@ export function About() {
           {/* Image side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="relative"
           >
@@ -52,10 +52,10 @@ export function About() {
             </div>
             <div className="absolute -bottom-6 -right-6 bg-[#d4966a] text-white p-6 rounded-2xl shadow-xl">
               <div className="text-4xl mb-1" style={{ fontFamily: 'var(--font-serif)' }}>
-                B.Sc.
+                Bachelors in 
               </div>
               <div className="text-sm" style={{ fontFamily: 'var(--font-sans)' }}>
-                Food Science
+                Food Technology — Tribhuwan Univ. (2023)
               </div>
             </div>
           </motion.div>
@@ -63,7 +63,7 @@ export function About() {
           {/* Content side */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full">
@@ -81,21 +81,13 @@ export function About() {
 
             <div className="space-y-4 text-[#6b6b6b] mb-8" style={{ fontFamily: 'var(--font-sans)' }}>
               <p className="leading-relaxed">
-                As a dedicated Food Science graduate, I bring a unique blend of scientific rigor
-                and creative innovation to the food industry. My academic journey has equipped
-                me with comprehensive knowledge in food chemistry, microbiology, nutrition, and
-                quality assurance.
+                I am a motivated and detail-oriented professional with a passion for contributing to the manufacture of high-quality food products while ensuring a safe and efficient work environment.
               </p>
               <p className="leading-relaxed">
-                I'm deeply passionate about developing sustainable food solutions that not only
-                meet the highest quality standards but also contribute to global food security
-                and environmental sustainability. My goal is to leverage scientific research to
-                create products that enhance public health and well-being.
+                My background includes hands-on lab experience (proximate analysis, microbial testing), quality control roles in dairy production, and internships in food technology and QC. I have experience in recipe formulation, product fortification, and sensory evaluation.
               </p>
               <p className="leading-relaxed">
-                Through hands-on laboratory experience and research projects, I've developed
-                strong analytical skills and a methodical approach to problem-solving in food
-                science applications.
+                Trained in HACCP, GMPs, and ISO 22000:2018, I combine technical rigor with teamwork and clear communication to improve quality and production processes.
               </p>
             </div>
 
@@ -104,7 +96,7 @@ export function About() {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="flex items-start gap-3"
                 >

@@ -10,83 +10,64 @@ export function Skills() {
   const skillCategories = [
     {
       icon: FlaskConical,
-      title: "Food Chemistry",
+      title: "Analytical & Lab Skills",
       skills: [
-        { name: "Chemical Analysis", level: 90 },
-        { name: "Ingredient Functionality", level: 85 },
-        { name: "Food Additives", level: 80 },
+        { name: "Chemical Testing", level: 92 },
+        { name: "Microbial Analysis", level: 90 },
+        { name: "Proximate Analysis", level: 88 },
+        { name: "Adulteration Testing", level: 88 },
       ],
       color: "#6b7b5e",
     },
     {
-      icon: Bug,
-      title: "Microbiology",
+      icon: TestTube,
+      title: "Dairy Processing",
       skills: [
-        { name: "Microbial Testing", level: 88 },
-        { name: "Food Preservation", level: 85 },
-        { name: "Fermentation", level: 82 },
+        { name: "Pasteurization", level: 90 },
+        { name: "Homogenization", level: 88 },
+        { name: "Fermentation", level: 86 },
       ],
       color: "#8b6f47",
     },
     {
-      icon: Apple,
-      title: "Nutrition",
+      icon: Shield,
+      title: "Food Safety & Quality",
       skills: [
-        { name: "Nutritional Analysis", level: 92 },
-        { name: "Diet Planning", level: 87 },
-        { name: "Label Compliance", level: 85 },
+        { name: "HACCP Principles", level: 92 },
+        { name: "GMP Compliance", level: 90 },
+        { name: "ISO 22000:2018", level: 88 },
       ],
       color: "#d4966a",
-    },
-    {
-      icon: Shield,
-      title: "Food Safety",
-      skills: [
-        { name: "HACCP Principles", level: 90 },
-        { name: "GMP Compliance", level: 88 },
-        { name: "Risk Assessment", level: 85 },
-      ],
-      color: "#8a9d7a",
     },
     {
       icon: ClipboardCheck,
       title: "Quality Control",
       skills: [
-        { name: "QA Procedures", level: 89 },
-        { name: "Sensory Evaluation", level: 86 },
-        { name: "Statistical Analysis", level: 84 },
+        { name: "QA Procedures", level: 90 },
+        { name: "Sensory Evaluation", level: 88 },
+        { name: "Documentation & Logs", level: 85 },
       ],
-      color: "#6b7b5e",
+      color: "#8a9d7a",
     },
     {
       icon: Lightbulb,
       title: "Product Development",
       skills: [
-        { name: "Formulation", level: 87 },
-        { name: "Prototype Testing", level: 85 },
-        { name: "Market Research", level: 80 },
+        { name: "Recipe Formulation", level: 88 },
+        { name: "Fortification", level: 86 },
+        { name: "Shelf-life Testing", level: 85 },
       ],
-      color: "#8b6f47",
-    },
-    {
-      icon: TestTube,
-      title: "Laboratory Techniques",
-      skills: [
-        { name: "Spectroscopy", level: 88 },
-        { name: "Chromatography", level: 85 },
-        { name: "Titration Methods", level: 90 },
-      ],
-      color: "#d4966a",
+      color: "#6b7b5e",
     },
     {
       icon: BookOpen,
-      title: "Research & Documentation",
+      title: "Research & Soft Skills",
       skills: [
-        { name: "Technical Writing", level: 91 },
-        { name: "Data Analysis", level: 87 },
-        { name: "Literature Review", level: 89 },
+        { name: "Technical Writing", level: 90 },
+        { name: "Teamwork & Communication", level: 89 },
+        { name: "Microsoft Office", level: 85 },
       ],
-      color: "#8a9d7a",
+      color: "#8b6f47",
     },
   ];
 
@@ -97,7 +78,7 @@ export function Skills() {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full">
@@ -124,7 +105,7 @@ export function Skills() {
               <motion.div
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-[#6b7b5e]/10 group hover:-translate-y-2"
               >
@@ -162,7 +143,7 @@ export function Skills() {
                           className="h-full rounded-full"
                           style={{ backgroundColor: category.color }}
                           initial={{ width: 0 }}
-                          animate={isInView ? { width: `${skill.level}%` } : {}}
+                          animate={{ width: `${skill.level}%` }}
                           transition={{ duration: 1, delay: 0.5 + categoryIndex * 0.1 + skillIndex * 0.1 }}
                         />
                       </div>

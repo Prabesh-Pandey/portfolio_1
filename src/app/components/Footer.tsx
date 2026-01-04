@@ -17,6 +17,8 @@ export function Footer() {
       { label: "Skills", id: "skills" },
       { label: "Projects", id: "projects" },
       { label: "Education", id: "education" },
+      { label: "Achievements", id: "achievements" },
+      { label: "References", id: "references" },
     ],
     resources: [
       { label: "Experience", id: "experience" },
@@ -28,7 +30,7 @@ export function Footer() {
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
     { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Mail, href: "mailto:foodscience@email.com", label: "Email" },
+    { icon: Mail, href: "mailto:food.prashamsa@gmail.com", label: "Email" },
   ];
 
   return (
@@ -51,7 +53,7 @@ export function Footer() {
               className="text-2xl mb-4"
               style={{ fontFamily: "var(--font-serif)" }}
             >
-              <span className="text-[#d4966a]">Food</span>Science
+              <span className="text-[#d4966a]">Prashamsa</span> Pandey
             </h3>
             <p
               className="text-sm text-white/80 mb-4 leading-relaxed"
@@ -129,21 +131,21 @@ export function Footer() {
             >
               <li>
                 <a
-                  href="mailto:foodscience@email.com"
+                  href="mailto:food.prashamsa@gmail.com"
                   className="hover:text-[#d4966a] transition-colors"
                 >
-                  food.prashamsa@email.com
+                  food.prashamsa@gmail.com
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="tel:+15551234567"
                   className="hover:text-[#d4966a] transition-colors"
                 >
                   +1 (555) 123-4567
                 </a>
-              </li>
-              <li className="pt-2">Portland, Oregon, USA</li>
+              </li> */}
+              {/* <li className="pt-2">Portland, Oregon, USA</li> */}
             </ul>
           </div>
         </div>

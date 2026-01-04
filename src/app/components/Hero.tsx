@@ -47,7 +47,7 @@ export function Hero() {
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full border border-[#6b7b5e]/20">
               <span className="text-[#6b7b5e]" style={{ fontFamily: 'var(--font-sans)' }}>
-                Food Science Graduate
+                Food Technology Graduate
               </span>
             </div>
           </motion.div>

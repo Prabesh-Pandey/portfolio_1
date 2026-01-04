@@ -35,21 +35,21 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "food.prashamsa@email.com",
-      href: "mailto:food.prashamsa@email.com",
+      value: "food.prashamsa@gmail.com",
+      href: "mailto:food.prashamsa@gmail.com",
       color: "#6b7b5e",
     },
-    // {
-    //   icon: Phone,
-    //   label: "Phone",
-    //   value: "",
-    //   href: "tel:+15551234567",
-    //   color: "#8b6f47",
-    // },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+977 9823510561",
+      href: "tel:+9779823510561",
+      color: "#8b6f47",
+    },
     {
       icon: MapPin,
       label: "Location",
-      value: "Lalitpur, Nepal",
+      value: "Birendranagar-3, Surkhet, Nepal",
       href: "#",
       color: "#d4966a",
     },
@@ -77,7 +77,7 @@ export function Contact() {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block mb-4 px-4 py-2 bg-[#6b7b5e]/10 rounded-full">
@@ -103,7 +103,7 @@ export function Contact() {
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h3
@@ -119,7 +119,7 @@ export function Contact() {
                     key={index}
                     href={info.href}
                     initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-[#f5f1e8] to-white hover:shadow-lg transition-all duration-300 group"
                   >
@@ -162,7 +162,7 @@ export function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       initial={{ opacity: 0, scale: 0.5 }}
-                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                       className="w-12 h-12 rounded-full bg-gradient-to-br from-[#f5f1e8] to-white flex items-center justify-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-[#6b7b5e]/10"
                     >
@@ -174,7 +174,7 @@ export function Contact() {
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="p-6 bg-gradient-to-br from-[#6b7b5e] to-[#8a9d7a] rounded-2xl text-white"
               >
@@ -185,13 +185,18 @@ export function Contact() {
                   Currently seeking full-time positions in food science, quality assurance, product
                   development, or research roles.
                 </p>
+                <div className="mt-4">
+                  <a href="/Prashamsa_Pandey_CV.pdf" download target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="bg-white text-[#6b7b5e] hover:bg-[#f5f1e8]">Download CV</Button>
+                  </a>
+                </div>
               </motion.div>
             </motion.div>
 
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <form onSubmit={handleSubmit} className="space-y-6">
