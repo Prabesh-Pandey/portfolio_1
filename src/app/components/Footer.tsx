@@ -22,7 +22,6 @@ export function Footer() {
     ],
     resources: [
       { label: "Experience", id: "experience" },
-      { label: "Blog", id: "blog" },
       { label: "Contact", id: "contact" },
     ],
   };

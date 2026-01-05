@@ -12,89 +12,28 @@ export function Projects() {
 
   const projects = [
     {
-      title: "Probiotic Yogurt Development",
-      category: "Product Development",
+      title:
+        "Effect of drying temperature on bioactive components of moringa leaves and storage stability of dried moringa leaf powder.",
+      category: "Thesis (B.Tech)",
       description:
-        "Developed a novel probiotic yogurt formulation with enhanced gut health benefits. Conducted sensory analysis and shelf-life studies to optimize product stability.",
-      tools: ["Fermentation Analysis", "Microbial Testing", "Sensory Evaluation", "pH Control"],
-      outcomes: [
-        "95% consumer acceptance rate",
-        "Extended shelf life by 30%",
-        "Optimized probiotic viability",
+        "B.Tech thesis investigating how different drying temperatures affect the retention of bioactive compounds in Moringa leaves, and the storage stability of the resulting dried moringa leaf powder. Included drying trials, compound quantification and storage studies.",
+      tools: [
+        "Drying Trials",
+        "Spectrophotometry / HPLC",
+        "Moisture Analysis",
+        "Storage Stability Testing",
+        "Statistical Analysis",
       ],
-      image: "https://images.unsplash.com/photo-1642497393440-4b5cc5f03ff5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxudXRyaXRpb24lMjBpbmdyZWRpZW50c3xlbnwxfHx8fDE3Njc1MTg5Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#6b7b5e",
-    },
-    {
-      title: "Plant-Based Protein Analysis",
-      category: "Research & Analysis",
-      description:
-        "Comprehensive nutritional analysis and protein quality evaluation of various plant-based protein sources for sustainable food applications.",
-      tools: ["HPLC", "Kjeldahl Method", "Amino Acid Profiling", "Digestibility Testing"],
       outcomes: [
-        "Identified optimal protein blends",
-        "Published research findings",
-        "Recommended formulation ratios",
+        "Characterized effect of drying temperature on bioactive retention",
+        "Recommended optimal drying parameters for maximum retention",
+        "Evaluated storage stability of dried moringa leaf powder",
       ],
-      image: "https://images.unsplash.com/photo-1657288649124-b80bdee3c17e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbmljJTIwdmVnZXRhYmxlcyUyMGZyZXNofGVufDF8fHx8MTc2NzUxODk2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#8b6f47",
-    },
-    {
-      title: "Food Safety Audit Implementation",
-      category: "Quality Assurance",
-      description:
-        "Led the implementation of HACCP principles and food safety protocols in a production facility, ensuring compliance with international standards.",
-      tools: ["HACCP", "GMP Protocols", "Risk Analysis", "Documentation Systems"],
-      outcomes: [
-        "Zero non-compliance issues",
-        "ISO 22000 certification support",
-        "Reduced contamination risks by 85%",
-      ],
-      image: "https://images.unsplash.com/photo-1765144815892-1925a0def4a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwcXVhbGl0eSUyMGNvbnRyb2x8ZW58MXx8fHwxNzY3NTE4OTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#d4966a",
-    },
-    {
-      title: "Natural Food Preservation Study",
-      category: "Research",
-      description:
-        "Investigated natural antimicrobial agents for food preservation, focusing on essential oils and plant extracts as alternatives to synthetic preservatives.",
-      tools: ["Microbial Culture", "Zone of Inhibition Tests", "Spectrophotometry", "Statistical Analysis"],
-      outcomes: [
-        "Identified effective natural preservatives",
-        "Developed preservation protocols",
-        "Presented at food science conference",
-      ],
-      image: "https://images.unsplash.com/photo-1588665306984-d5c6f62224aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwcmVzZWFyY2glMjBtaWNyb3Njb3BlfGVufDF8fHx8MTc2NzUxODk2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#8a9d7a",
-    },
-    {
-      title: "Nutritional Labeling System",
-      category: "Regulatory Compliance",
-      description:
-        "Developed a comprehensive nutritional labeling and compliance system for a food manufacturing company, ensuring adherence to FDA regulations.",
-      tools: ["Nutritional Database", "Regulatory Guidelines", "Label Design", "Compliance Audits"],
-      outcomes: [
-        "100% label compliance achieved",
-        "Streamlined approval process",
-        "Reduced labeling errors by 95%",
-      ],
-      image: "https://images.unsplash.com/photo-1737072260639-892df386a681?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwY2hlbWlzdHJ5JTIwZXF1aXBtZW50fGVufDF8fHx8MTc2NzUxODk2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#6b7b5e",
-    },
-    {
-      title: "Gluten-Free Bakery Formulation",
-      category: "Product Innovation",
-      description:
-        "Created gluten-free bakery products with improved texture and nutritional profile, addressing celiac disease and gluten sensitivity concerns.",
-      tools: ["Texture Analysis", "Baking Technology", "Ingredient Substitution", "Consumer Testing"],
-      outcomes: [
-        "Successfully replaced gluten functionality",
-        "Enhanced nutritional value",
-        "Positive consumer feedback",
-      ],
-      image: "https://images.unsplash.com/photo-1684259498900-afdea87b1a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwc2NpZW5jZSUyMGxhYm9yYXRvcnl8ZW58MXx8fHwxNzY3NTAwMjYzfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      color: "#8b6f47",
-    },
+      image:
+        "https://images.unsplash.com/photo-1506806732259-39c2d0268443?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      color: "#4b7a63",
+      link: "https://example.com/thesis",
+    }
   ];
 
   return (
@@ -209,13 +148,15 @@ export function Projects() {
                     </ul>
                   </div>
 
-                  <Button
-                    variant="ghost"
-                    className="w-full text-[#6b7b5e] hover:bg-[#6b7b5e]/10 justify-between group/btn"
-                  >
-                    <span style={{ fontFamily: 'var(--font-sans)' }}>View Details</span>
-                    <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  <a href={project.link ?? '#'} target="_blank" rel="noreferrer" className="block">
+                    <Button
+                      variant="ghost"
+                      className="w-full text-[#6b7b5e] hover:bg-[#6b7b5e]/10 justify-between group/btn"
+                    >
+                      <span style={{ fontFamily: 'var(--font-sans)' }}>View Details</span>
+                      <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </a>
                 </div>
               </motion.div>
             ))}

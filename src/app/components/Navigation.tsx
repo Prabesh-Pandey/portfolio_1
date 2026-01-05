@@ -53,7 +53,6 @@ export function Navigation() {
     { label: "Education", id: "education" },
     { label: "Achievements", id: "achievements" },
     { label: "References", id: "references" },
-    { label: "Blog", id: "blog" },
     { label: "Contact", id: "contact" },
   ];
 

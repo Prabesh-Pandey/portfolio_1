@@ -5,6 +5,8 @@ import { Clock, ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+// NOTE: The Blog component is intentionally kept in the repository but disabled from the main layout.
+
 export function Blog() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });

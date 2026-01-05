@@ -6,7 +6,7 @@ export function References() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
-  const refs = [
+  const refs: Array<{ name: string; title: string; contact?: string }> = [
     {
       name: "Prof. Basanta Kumar Rai",
       title: "Ex-Chairman, Department of Food Technology, CCT, Sunsari",
